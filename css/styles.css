@@ -5,6 +5,7 @@
   --primery-white-color: #ffffff;
   --primary-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
+  --hero-background-color: #2F303A;
 }
 
 body {
@@ -112,11 +113,7 @@ button {
   color: var(--accent-color);
 }
 /* HERO */
-.hero {
-  background-color: #2f303a;
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
+
 .hero-name {
   font-weight: 900;
   font-size: 44px;
@@ -244,8 +241,7 @@ button {
 
 /* ===========================PORTFOLIO============================== */
 
-.portfolio-header,
-.start-header {
+.top-header {
   border-bottom: 1px solid #ECECEC;
 }
 
@@ -318,6 +314,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /* border: solid 1px green; */
+}
+
+.top-header {
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -334,7 +335,6 @@ button {
   display: flex;
 }
 
-
 .benefits,
 .to-do-gallery,
 .team-list,
@@ -342,17 +342,18 @@ button {
   gap: 30px;
 }
 
-.benefits {
-  margin-top: 94px; 
-}
-
-.benefits-list {
-  border:solid transparent;
-}
-
 .filter-btn-list {
   justify-content: center;
   margin-bottom: 50px;
+}
+
+.hero {
+  background-color: var(--hero-background-color)
+}
+
+.hero-container {
+  margin-top: 106px;
+  margin-bottom: 106px;
 }
 
 .projects {
@@ -375,15 +376,17 @@ button {
   margin-right: 50px;
 }
 
-.to-do-container,
-.team-container,
-.portfolio-container
- {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.footer-container {
+.to-do-section {
+  padding-top: 0;
+}
+
+
+.page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -403,4 +406,12 @@ button {
 .card-name-info {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.contact-footer-list:not(:last-child) {
+margin-bottom: 9px;
+}
+
+.benefits {
+  border: solid transparent;
 }
