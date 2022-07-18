@@ -3,10 +3,15 @@
   --secondary-color: #212121;
   --accent-color: #2196f3;
   --primery-white-color: #ffffff;
+  --secondary-white-color: #EEEEEE;
+  --white-color: #f5f4fa;
+  --hero-background-color: #2F303A;
+
   --primary-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
-  --hero-background-color: #2F303A;
 }
+
+/* ============================================RESET======================================= */
 
 body {
   font-family: var(--primary-font);
@@ -64,7 +69,60 @@ button {
   overflow: hidden;
 }
 
-/* LOGO */
+/* =================================UTILITY-CLASSES============================= */
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.top-nav,
+.menu,
+.contact-header,
+.to-do-gallery,
+.team-list,
+.benefits,
+.filter-btn-list,
+.projects
+{
+  display: flex;
+}
+
+.benefits,
+.to-do-gallery,
+.team-list,
+.projects {
+  gap: 30px;
+}
+
+/* =====================================HEADER===================================== */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #ECECEC;
+}
+
+/* ====================LOGO================ */
+.logo-header {
+  margin-right: 93px;
+}
+
 .logo {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -73,10 +131,15 @@ button {
 
   color: var(--accent-color);
 }
+
 .studio {
   color: #000000;
 }
-/* NAV */
+/* ====================NAV=================== */
+.menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .menu-link {
   font-weight: 500;
   line-height: 1.14;
@@ -93,7 +156,7 @@ button {
   color: var(--accent-color);
 }
 
-/* CONTACTS */
+/* ====================CONTACTS=================== */
 
 .contact-mail,
 .contact-phone {
@@ -104,6 +167,11 @@ button {
 
   color: var(--pimary-color);
 }
+
+.mail-header {
+  margin-right: 50px;
+}
+
 .contact-mail:hover,
 .contact-mail:focus {
   color: var(--accent-color);
@@ -112,7 +180,16 @@ button {
 .contact-phone:focus {
   color: var(--accent-color);
 }
-/* HERO */
+
+/* ===============================================HERO============================================ */
+.hero {
+  background-color: var(--hero-background-color);
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  text-align: center;
+}
 
 .hero-name {
   font-weight: 900;
@@ -124,6 +201,7 @@ button {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 
   text-transform: uppercase;
   color: var(--primery-white-color);
@@ -134,14 +212,8 @@ button {
   font-size: 16px;
   line-height: 1.88;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 10px 32px;
 
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
 
   color: var(--primery-white-color);
@@ -150,11 +222,9 @@ button {
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
 }
+
+/* ============================================BENEFITS============================================= */
 
 .benefits-name {
   font-size: 14px;
@@ -166,10 +236,21 @@ button {
   margin-bottom: 10px;
 }
 
-/* TEAM */
-.team {
-  background: #f5f4fa;
+.benefits-list {
+  width: 270px;
 }
+
+/* ==========================================--TO-DO_SECTION========================================== */
+
+.to-do-section {
+  padding-top: 0;
+}
+
+/* ==============================================TEAM================================================= */
+.team {
+  background: var(--white-color);
+}
+
 .section-name {
   font-size: 36px;
   line-height: 1.17;
@@ -198,16 +279,24 @@ button {
   
   margin-bottom: 10px;
 }
+
 .card-info {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
 
-/* FOOTER */
+.card-name-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* ==================================================FOOTER======================================= */
 
 .page-footer {
-  background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background: var(--hero-background-color)
 }
 
 .address-map,
@@ -227,10 +316,12 @@ button {
 .address .contact-mail:focus {
   color: var(--accent-color);
 }
+
 .address .contact-phone:hover,
 .address .contact-phone:focus {
   color: var(--accent-color);
 }
+
 .studio-footer {
   color: var(--primery-white-color);
 }
@@ -239,16 +330,22 @@ button {
   margin-top: 20px;
 }
 
-/* ===========================PORTFOLIO============================== */
+.contact-footer-list:not(:last-child) {
+  margin-bottom: 9px;
+  }
 
-.top-header {
-  border-bottom: 1px solid #ECECEC;
+/* ==============================================PORTFOLIO========================================== */
+/* ============FILTER-BUTTONS============ */
+.filter-button:not(:last-child) {
+  margin-right: 8px;
 }
 
-
 .filter-btn {
-  background: #f5f4fa;
+  background: var(--white-color);
+  color: var(--secondary-color);
+
   border-radius: 4px;
+  border-color: transparent;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -257,13 +354,7 @@ button {
   line-height: 1.62;
   text-align: center;
 
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 22px;
-  padding-right: 22px;
-
-  color: var(--secondary-color);
-  border-color: transparent;
+  padding: 6px 22px;
 }
 
 .filter-btn:hover,
@@ -272,6 +363,7 @@ button {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  
   color: var(--primery-white-color);
 }
 
@@ -280,80 +372,9 @@ button {
   color: var(--primery-white-color);
 }
 
-.project-card {
-  background: #FFFFFF;
-}
-
-.project-name {
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-
-  color: var(--secondary-color);
-}
-
-.project-info {
-  font-size: 16px;
-  line-height: 1.88;
-  margin-bottom: 4px;
-}
-
-/* ===========================BLOKS============================================== */
-
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  /* border: solid 1px red; */
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  /* border: solid 1px green; */
-}
-
-.top-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-.top-nav,
-.menu,
-.contact-header,
-.to-do-gallery,
-.team-list,
-.benefits,
-.filter-btn-list,
-.projects
-{
-  display: flex;
-}
-
-.benefits,
-.to-do-gallery,
-.team-list,
-.projects {
-  gap: 30px;
-}
-
 .filter-btn-list {
   justify-content: center;
   margin-bottom: 50px;
-}
-
-.hero {
-  background-color: var(--hero-background-color)
-}
-
-.hero-container {
-  margin-top: 106px;
-  margin-bottom: 106px;
 }
 
 .projects {
@@ -362,56 +383,25 @@ button {
 
 .project-card {
   flex-basis: calc((100% - 60px) / 3);
+  background-color: var(--primery-white-color);
 }
 
-.logo-header {
-  margin-right: 93px;
+.project-name {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--secondary-color);
+
+  margin-bottom: 4px;
 }
 
-.menu-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.mail-header {
-  margin-right: 50px;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.to-do-section {
-  padding-top: 0;
-}
-
-
-.page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.filter-button:not(:last-child) {
-  margin-right: 8px;
+.project-info {
+  font-size: 16px;
+  line-height: 1.88;
 }
 
 .project-name-info {
-  border: 1px solid #EEEEEE;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.card-name-info {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.contact-footer-list:not(:last-child) {
-margin-bottom: 9px;
-}
-
-.benefits {
-  border: solid transparent;
+  border: 1px solid var(--secondary-white-color);
+  padding: 20px 24px;
 }
